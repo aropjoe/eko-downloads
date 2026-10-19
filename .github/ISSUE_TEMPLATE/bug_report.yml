@@ -1,0 +1,38 @@
+name: Bug report
+description: Something broke or felt wrong in an Eko build
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing Eko. This page is **public**: please don't post your email, phone number or other personal details. No GitHub account? Use the feedback form at https://tens.games/eko/#feedback instead.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options: [Android, Windows, macOS]
+    validations: {required: true}
+  - type: input
+    id: device
+    attributes:
+      label: Device and OS
+      description: Phone model and Android version, or Windows/macOS version and graphics card
+      placeholder: "Tecno Spark 10, Android 13"
+    validations: {required: true}
+  - type: input
+    id: build
+    attributes:
+      label: Build / release name
+      description: The release you downloaded (see the Releases page)
+    validations: {required: true}
+  - type: input
+    id: where
+    attributes:
+      label: Act and mission
+      placeholder: "Act 1, The Sealed Parcel"
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, what happened instead. Screenshots welcome.
+    validations: {required: true}
